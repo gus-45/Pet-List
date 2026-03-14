@@ -1,13 +1,13 @@
 # Pet-List
 
-
+```
 Pet-List/
-
+├── assets
 ├── src                  
-     ├── business            
-     ├── model         
-     ├── view           
-     ├── viewModel         
+   ├── business            
+   ├── model         
+   ├── view           
+   └── viewModel         
 ├── .gitignore        
 ├── App.tsx        
 ├── Readme.md         
@@ -16,3 +16,4 @@ Pet-List/
 ├── package-lock-json     
 ├── package.json
 ├── tsconfig.json
+```
