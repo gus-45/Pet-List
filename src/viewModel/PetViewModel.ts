@@ -1,5 +1,5 @@
 import { Pet } from "../model/Pet";
-import { PetBusiness} from "../business/PetBusiness";
+import { PetBusiness } from "../business/PetBusiness";
 
 export class PetViewModel {
   
@@ -11,11 +11,11 @@ export class PetViewModel {
     return this.lista;
   }
   
-  adicionarPet( nome: string, descricao: string): String | null {
+  adicionarPet(nome: string, descricao: string): String | null {
     
     const erro = this.business.validarPet(nome, this.lista);
 
-    if(erro) {
+    if (erro) {
       return erro;
     }
 
@@ -29,4 +29,9 @@ export class PetViewModel {
 
     return null;
   }
+
+  removerPet(id: number): void {
+    this.lista = this.lista.filter(pet => pet.id !== id);
+  }
+
 }
