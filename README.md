@@ -7,7 +7,8 @@ Pet-List/
 ├── assets
 ├── src                  
    ├── business            
-   ├── model         
+   ├── model
+   ├── styles       
    ├── view           
    └── viewModel         
 ├── .gitignore        
