@@ -12,26 +12,22 @@ export class PetViewModel {
   }
   
   adicionarPet(nome: string, descricao: string): String | null {
-    
     const erro = this.business.validarPet(nome, this.lista);
-
     if (erro) {
       return erro;
     }
-
     const novoPet: Pet = {
       id: this.idAtual++, 
       nome: nome,
       descricao: descricao
     };
-
     this.lista.push(novoPet);
-
     return null;
   }
 
   removerPet(id: number): void {
     this.lista = this.lista.filter(pet => pet.id !== id);
   }
-
 }
+
+export const viewModel = new PetViewModel();
