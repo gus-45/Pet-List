@@ -7,22 +7,22 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { useFocusEffect } from "@react-navigation/native";
 import { Pet } from "../../model/Pet";
- 
+
 export function ListaScreen() {
   const navigation = useNavigation<any>();
   const [pets, setPets] = useState<Pet[]>([]);
- 
+
   useFocusEffect(
     useCallback(() => {
       setPets([...viewModel.getPets()]);
     }, []),
   );
- 
+
   function removerPet(id: number) {
     viewModel.removerPet(id);
     setPets([...viewModel.getPets()]);
   }
- 
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
@@ -46,7 +46,7 @@ export function ListaScreen() {
                 style={styles.botaoExcluir}
                 onPress={() => removerPet(item.id)}
               >
-                <MaterialIcons name="delete" size={24} color="#E74C3C" />
+                <MaterialIcons name="delete" size={24} color="#ff2400" />
               </TouchableOpacity>
             </View>
           )}
